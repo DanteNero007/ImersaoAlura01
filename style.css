@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto Mono',monospace;
+    text-align:center;
+    
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  
+  #listaFilmes img {
+    margin: 10px;
+  }
+  
+  .form-wrapper {
+    margin: 0 0 15px;
+  }
+  
+  .form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+  }
+  
+  .form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #DA1E26;
+    font-weight:bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    borde-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .form-wrapper button:hover {
+    opacity:.8;
+  }
+
+#listaFilmes{
+  position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform:perspective(1000px) rotateY(360deg);
+    }
+}
+#listaFilmes span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg )) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004)
+}
+#listaFilmes span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo{
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004)
+
+}
